@@ -5,7 +5,8 @@
 }
 
 body {
-    background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
+    background-color: white;
+    /*background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);*/
 }
 
 ::-webkit-scrollbar {
@@ -85,7 +86,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    position: relaive;
+    position: relative;
     z-index: 0;
 }
 
@@ -98,6 +99,7 @@ body {
     grid-area: col-sabores;
 }
 
+/*cuadro de sabores*/
 .cuadro-sabores {
     width: 100%;
     /*cuanto queremos que los cuadros cupen de ancho de columnas*/
@@ -107,11 +109,12 @@ body {
     margin-top: 20px;
 }
 
+/*estilo de lista*/
 .cuadro-sabores ul {
     list-style: none;
-    text-align: center;
 }
 
+/*cuadro de texto de lista*/
 .cuadro-sabores ul li {
     position: relative;
     cursor: pointer;
@@ -119,12 +122,13 @@ body {
     text-align: center;
 }
 
+/*texto sabores*/
 .cuadro-sabores li a {
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
+/*tooltip cuadrado*/
 .cuadro-sabores li span {
     width: 100%;
     display: inline-block;
@@ -132,6 +136,12 @@ body {
     line-height: 17px;
 }
 
+/*texto encabezado de logo*/
+h2 {
+    color: #9932CC;
+}
+
+/*titulo de sabores de helados*/
 .sabores h4 {
     text-align: center;
     width: 100%;
@@ -142,6 +152,32 @@ body {
     margin-top: 25px;
 }
 
+.logo-sabores-izquierda{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 20%;
+    max-width: 320px;
+}
+
+.logo-sabores-derecha{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 20%;
+    max-width: 320px;
+}
+
+.logo-sabores-1{
+    width: 20%;
+}
+
+.logo-sabores-2{
+    width: 20%;
+    max-width: 320px
+}
+
+/*titulo de cuadros*/
 .cuadro-sabores h6 {
     font-size: 30px;
     line-height: 35px;
@@ -152,7 +188,7 @@ body {
 
 .icono {
     position: absolute;
-    left: -18px;
+    left: -28px;
     height: 14px;
     top: 5px;
     overflow: clip;
@@ -161,7 +197,7 @@ body {
 footer {
     width: 100%;
     height: auto;
-    padding: 50px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,21 +259,40 @@ footer a:hover {
         "footer";
 }
 
-.texto-dropdown{
+.texto-dropdown {
     display: none;
     z-index: 1;
     background-color: aliceblue;
 }
 
-.dropdown{
+.dropdown {
     position: relative;
 }
 
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1210px) {
 
     .menu ul li {
         margin: 0px;
     }
+
+    .menu ul {
+        list-style: none;
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    .menu ul li {
+        display: inline-block;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .logo a {
+        width: auto;
+    }
+
 
 }
 
@@ -254,13 +309,17 @@ footer a:hover {
         margin: auto;
     }
 
-    .dropdown:hover .texto-dropdown{
+    .dropdown:hover .texto-dropdown {
         display: block;
+    }
+
+    .menu ul {
+        display: none;
     }
 
     .col-sabores {
         width: 100%;
-        margin: 0;
+        margin: 0px;
     }
 
     .cuadro-sabores {
