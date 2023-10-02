@@ -21,6 +21,7 @@ body {
     padding: 25px;
     margin-left: 550px;
     font-size: 20px;
+    margin-top: -70px;
 
 }
 
@@ -41,6 +42,7 @@ ul {
     font-weight: bold;
     color: #9932CC;
     white-space: nowrap;
+    text-decoration: none;
 
 }
 
@@ -87,6 +89,9 @@ ul {
     text-decoration: none;
 }
 
+.nav2 a{
+    text-decoration: none;
+}
 .nav2 {
     margin-left: 600px;
     display: flex;
@@ -132,38 +137,39 @@ ul {
 
 .cremas ul {
     margin-left: -280px;
-    color:#8333FF;
+    color: #8333FF;
     font-weight: bold;
 
 
 }
 
-.cremas li:hover{
-   color:orange;
+.cremas li:hover {
+    color: orange;
 
 
 }
 
-.agua li:hover{
-    color:orange;
- 
- 
- }
+.agua li:hover {
+    color: orange;
 
- .ddl li:hover{
-    color:orange;
- 
- 
- }
- .choco li:hover{
-    color:orange;
- 
- 
- }
+
+}
+
+.ddl li:hover {
+    color: orange;
+
+
+}
+
+.choco li:hover {
+    color: orange;
+
+
+}
 
 .cremas h3 {
     margin-left: -230px;
-    color:#8333FF;
+    color: #8333FF;
     font-weight: bold;
 
 
@@ -174,12 +180,12 @@ ul {
     margin-left: 90px;
     margin-top: -500px;
     font-family: 'Merienda', cursive;
-    
+
 }
 
 .ddl ul {
     margin-left: -50px;
-    color:#8333FF;
+    color: #8333FF;
     font-weight: bold;
 
 }
@@ -195,27 +201,27 @@ ul {
 
 .choco ul {
     margin-left: -90px;
-    color:#8333FF;
+    color: #8333FF;
     font-weight: bold;
 }
 
 .choco h3 {
-    color:#8333FF;
+    color: #8333FF;
     font-weight: bold;
     margin-left: -60px;
 
 }
 
-.agua ul{
-    color:#8333FF;
+.agua ul {
+    color: #8333FF;
     font-weight: bold;
 
 }
 
 .ddl h3 {
-    color:#8333FF;
+    color: #8333FF;
     font-weight: bold;
-    
+
 
 }
 
@@ -227,7 +233,7 @@ ul {
 }
 
 .agua h3 {
-    color:#8333FF;
+    color: #8333FF;
     font-weight: bold;
     margin-left: -10px;
     margin-right: -50px;
@@ -237,22 +243,22 @@ ul {
 
 .historia h3 {
 
-    text-align: left;
-    margin-left: 5px;
+    margin-left: 190px;
     font-family: 'Berkshire Swash', cursive;
     font-family: 'Merienda', cursive;
     font-family: 'Trochut', cursive;
     font-size: 70px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .historia p {
 
-    margin-left: -5px;
-    width: 700px;
+    margin-left: 130px;
+    width: 70%;
     text-align: justify;
     font-family: 'Merienda', cursive;
     font-size: 20px;
+    margin-top: -30px;
 
 }
 
@@ -261,8 +267,8 @@ ul {
     grid-area: historia;
     margin-top: 50px;
     background-color: #bbff99;
-    width: 800px;
-    padding-left: 50px;
+    width: 70%;
+    margin-left: -220px;
 
 }
 
@@ -284,38 +290,15 @@ ul {
     color: orange;
 }
 
-.d-block w-100 {
-    align-items: center;
-
-}
-
-.carouselExampleControls {
-
-    grid-area: carouselExampleControls;
-
-
-
-}
-
 
 .index {
     grid-area: index;
-    padding-top: 60px;
+    padding-top: 30px;
     width: 130px;
     height: 120px;
+    padding-block-end: 50px;
 }
 
-.carousel2 {
-    grid-area: carousel2;
-    margin-left: 50px;
-    margin-top: 85px;
-    width: 900px;
-    
-}
-
-div.carousel2.aos-init.aos-animate {
-       width: 900px;
-}
 
 .imgsabor2 {
     grid-area: imgsabor2;
@@ -325,10 +308,9 @@ div.carousel2.aos-init.aos-animate {
 }
 
 .imgsabor2 img {
-    margin-right: -90px;
+    margin-left: -100px;
     transform: rotate(-30deg);
     opacity: .5;
-
     width: 700px;
     height: 600px;
 }
@@ -348,30 +330,126 @@ div.carousel2.aos-init.aos-animate {
     opacity: .5;
 }
 
-.carousel2 a.carousel-control-next {
+.carousel1 {
+    width: 100vw;
+    height: auto;
 
-    margin-right: -100px;
 }
 
-.carousel2 a.carousel-control-prev {
-
-    margin-right: -100px;
+.carousel1 ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    margin-top: 30px;
+    animation: slide 30s infinite alternate ease-in-out;
 }
 
-.carousel2 div.carousel-inner{
-    margin-left: 150px;
-    
+.carousel1 li {
+    width: 100%;
+    list-style: none;
+    position: relative;
 }
 
-.carousel2 carousel-item img{
-    width: 790px;
-    margin-left: -160px;
-    
+.carousel1 img {
+    width: 100%;
 }
 
-.carousel2 ol.carousel-indicators {
-    margin-right: 70px;
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
 }
+
+.carousel2 {
+    width: 35vw;
+    padding: 40px;
+    overflow: hidden;
+    margin-top: 90px;
+}
+
+
+.carousel2 ul {
+    display: flex;
+    gap: 10px;
+
+    width: 400%;
+    animation: slide 12s infinite alternate;
+}
+
+.carousel2 li {
+    width: 100%;
+    list-style: none;
+
+}
+
+.carousel2 img {
+    width: 100%;
+
+}
+
+
+@keyframes slide {
+    0% {
+        margin-left: 0%;
+    }
+
+    20% {
+        margin-left: 0%;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
 
 
 
