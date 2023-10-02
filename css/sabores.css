@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0px;
+    height: 0px;
+}
+
+/*encabezado*/
+.menu {
+    display: flex;
+    min-height: 70px;
+    justify-content: space-evenly;
+    /*se puede cambiar para modificar entre otras cosas distancia y posicionamiento de los elementos*/
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    font-family: 'Merienda', oblique;
+    font-size: 20px;
+    grid-area: menu;
+}
+
+.menu ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+.menu ul li {
+    display: inline-block;
+    padding: 20px 0px;
+}
+
+.menu li a {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    margin: 20px;
+    /*subiendo esto le puedo dar mas espacion*/
+    text-decoration: none;
+    color: #9932CC;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: 130px;
+}
+
+/*contenedor padre de lista de sabores*/
+.sabores {
+    height: auto;
+    /*para que se ajuste el alto de todo*/
+    position: relative;
+    width: 100%;
+    padding: 5px 0px;
+    /*para tapar el aujero que deja para arriba y para abajo el height auto*/
+    grid-area: sabores;
+}
+
+/*contenedor de columnas y cuadros*/
+.lista-sabores {
+    margin: 30px 0;
+    /*que quede un cachito para abajo y arriba*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relaive;
+    z-index: 0;
+}
+
+/*contenedor de columnas*/
+.col-sabores {
+    width: 28%;
+    /*ancho de cada columna*/
+    margin: 0 20px;
+    /*distancia entre colemna y columna*/
+    grid-area: col-sabores;
+}
+
+.cuadro-sabores {
+    width: 100%;
+    /*cuanto queremos que los cuadros cupen de ancho de columnas*/
+    height: auto;
+    padding: 60px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.cuadro-sabores ul {
+    list-style: none;
+    text-align: center;
+}
+
+.cuadro-sabores ul li {
+    position: relative;
+    cursor: pointer;
+    padding: 4px 2px;
+    text-align: center;
+}
+
+.cuadro-sabores li a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.cuadro-sabores li span {
+    width: 100%;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.sabores h4 {
+    text-align: center;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+.cuadro-sabores h6 {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.icono {
+    position: absolute;
+    left: -18px;
+    height: 14px;
+    top: 5px;
+    overflow: clip;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer;
+}
+
+footer div {
+    margin: 0 50px;
+    display: flex;
+    font-family: 'Merienda', cursive;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #9932CC;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.icono-footer {
+    gap: 20px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    display: none;
+    width: 240px;
+    /*ajusta el ancho del toltip al 100% del texto*/
+    background-color: rgb(92, 88, 88);
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.tooltip:hover .tooltip-text {
+    display: block;
+}
+
+.contenedor {
+    overflow-x: hidden;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "menu"
+        "sabores"
+        "footer";
+}
+
+.texto-dropdown{
+    display: none;
+    z-index: 1;
+    background-color: aliceblue;
+}
+
+.dropdown{
+    position: relative;
+}
+
+@media screen and (max-width: 1270px) {
+
+    .menu ul li {
+        margin: 0px;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .lista-sabores {
+        flex-direction: column;
+        width: 80%;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .dropdown:hover .texto-dropdown{
+        display: block;
+    }
+
+    .col-sabores {
+        width: 100%;
+        margin: 0;
+    }
+
+    .cuadro-sabores {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    /*intertan que el menu quede como columna para despues hacer desplegable*/
+    .menu li a {
+        padding: 10px 10px;
+    }
+
+    .menu ul li {
+        display: block;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .sabores h4 {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 20px 0;
+        padding-bottom: 30px;
+    }
+}
